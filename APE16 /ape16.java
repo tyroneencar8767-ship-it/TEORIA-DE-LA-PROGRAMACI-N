@@ -6,9 +6,9 @@ public class OperacionesMatrices {
     static final int COLUMNAS = 3;
     static Scanner scanner = new Scanner(System.in);
 
-    
-     //Solicita al usuario los valores para llenar una matriz de tamaño FILAS x COLUMNAS.
-     
+    /**
+     * Solicita al usuario los valores para llenar una matriz de tamaño FILAS x COLUMNAS.
+     */
     public static int[][] completar_matriz(char nombreMatriz) {
         int[][] matriz = new int[FILAS][COLUMNAS];
         System.out.println("Ingrese los datos de la matriz " + nombreMatriz + ":");
@@ -23,9 +23,9 @@ public class OperacionesMatrices {
         return matriz;
     }
 
-    
-   //Suma dos matrices elemento por elemento.
-     
+    /**
+     * Suma dos matrices elemento por elemento.
+     */
     public static int[][] suma_matriz(int[][] m1, int[][] m2) {
         int[][] resultado = new int[FILAS][COLUMNAS];
         for (int i = 0; i < FILAS; i++) {
@@ -36,8 +36,8 @@ public class OperacionesMatrices {
         return resultado;
     }
 
-  
-    //Resta la segunda matriz de la primera elemento por elemento.
+    /**
+     * Resta la segunda matriz de la primera elemento por elemento.
      */
     public static int[][] resta_matriz(int[][] m1, int[][] m2) {
         int[][] resultado = new int[FILAS][COLUMNAS];
@@ -50,8 +50,7 @@ public class OperacionesMatrices {
     }
 
     /**
-     * Nota: Realiza una multiplicación elemento a elemento (Hadamard),
-     * no una multiplicación matricial algebraica tradicional.
+     * Realiza una multiplicación elemento a elemento
      */
     public static int[][] multiplicacion_matriz(int[][] m1, int[][] m2) {
         int[][] resultado = new int[FILAS][COLUMNAS];
@@ -63,9 +62,9 @@ public class OperacionesMatrices {
         return resultado;
     }
 
-    
-    //Imprime en pantalla la matriz resultante de una operación en formato tabular.
-     
+    /**
+     * Imprime en pantalla la matriz resultante de una operación en formato tabular.
+     */
     public static void mostrar_resultado(int[][] matriz, String operacion) {
         System.out.println("\nResultado de " + operacion + ":");
         for (int i = 0; i < FILAS; i++) {
@@ -76,9 +75,9 @@ public class OperacionesMatrices {
         }
     }
 
-    
-     //Función principal que coordina la entrada de datos, operaciones y salida.
-     
+    /**
+     * Función principal que coordina la entrada de datos, operaciones y salida.
+     */
     public static void main(String[] args) {
         // Se solicitan las matrices A y B al usuario
         int[][] A = completar_matriz('A');
